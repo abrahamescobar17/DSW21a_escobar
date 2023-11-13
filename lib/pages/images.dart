@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ImagesPage extends StatelessWidget {
+  final List<String> imagePaths = ['images/1.jpg', 'images/2.jpg', 'images/3.jpg'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -11,17 +13,23 @@ class ImagesPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(''),
             SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _buildImage('images/1.jpg', size: 0),
-                SizedBox(width: 10),
-                _buildImage('images/2.jpg', size: 120),
-                SizedBox(width: 10),
-                _buildImage('images/3.jpg', size: 120),
-              ],
+            Container(
+              height: 200,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: imagePaths.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Column(
+                      children: [
+                        _buildImage(imagePaths[index], size: 150),
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
           ],
         ),
@@ -35,6 +43,14 @@ class ImagesPage extends StatelessWidget {
       height: size,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.3),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 3),
+          ),
+        ],
         image: DecorationImage(
           image: AssetImage(imagePath),
           fit: BoxFit.cover,
