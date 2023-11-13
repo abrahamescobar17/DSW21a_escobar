@@ -1,7 +1,7 @@
 import 'package:dsw21a_escobar/pages/Chip.dart';
 import 'package:dsw21a_escobar/pages/Icon.dart';
 import 'package:flutter/material.dart';
-import 'pages/images.dart';
+
 import 'package:dsw21a_escobar/pages/Icon.dart';
 import 'package:dsw21a_escobar/pages/Chip.dart';
 
@@ -48,16 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            ListTile(
-              leading: Icon(Icons.image),
-              title: Text('Images'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ImagesPage()),
-                );
-              },
-            ),
+         
             ListTile(
               leading: Icon(Icons.face),
               title: Text('Icon'),

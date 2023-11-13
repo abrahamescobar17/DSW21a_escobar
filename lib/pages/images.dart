@@ -16,7 +16,7 @@ class ImagesPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _buildImage('images/1.jpg', size: 120),
+                _buildImage('images/1.jpg', size: 0),
                 SizedBox(width: 10),
                 _buildImage('images/2.jpg', size: 120),
                 SizedBox(width: 10),
