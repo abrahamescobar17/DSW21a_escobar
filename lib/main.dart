@@ -2,8 +2,9 @@ import 'package:dsw21a_escobar/pages/Chip.dart';
 import 'package:dsw21a_escobar/pages/Icon.dart';
 import 'package:flutter/material.dart';
 import 'pages/images.dart';
-import 'pages/icon.dart';
-import 'pages/chip.dart';
+import 'package:dsw21a_escobar/pages/Icon.dart';
+import 'package:dsw21a_escobar/pages/Chip.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(),
     );
   }
@@ -28,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Flutter Navigation Drawer'),
+        title: Text('Eval Escobar'),
       ),
       drawer: Drawer(
         child: ListView(
@@ -80,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Center(
-        child: Text('Contenido de la página principal'),
+        child: Text('PAGINA PRINCIPAL'),
       ),
     );
   }
